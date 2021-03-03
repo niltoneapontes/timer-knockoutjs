@@ -16,6 +16,10 @@ body {
 }
 
 @media(max-width: 768px) {
+  body {
+    height: auto;
+  }
+  
   footer{
     position: absolute;
     margin-top: 104px;

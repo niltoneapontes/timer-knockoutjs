@@ -1,3 +1,21 @@
+function Sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+    this.sound.play();
+  }
+  this.stop = function(){
+    this.sound.pause();
+  }
+}
+
+const start = new Sound('ring.wav');
+const end = new Sound('finish.wav');
+
 function ChronometerViewModel() {
   let self = this;
   self.time = ko.observable(0);
@@ -10,6 +28,7 @@ function ChronometerViewModel() {
     self.isRunning(true);
     lastTimer = self.time();
     self.message("GO!");
+    start.play();
 
     const repeat = setInterval(() => {
       let aux = self.time() - 1;
@@ -17,7 +36,8 @@ function ChronometerViewModel() {
       aux < 0 ? (
         clearInterval(repeat),
         self.isRunning(false),
-        self.message("STOP!")
+        self.message("STOP!"),
+        end.play()
       ) : (
         self.time(aux)
       )
