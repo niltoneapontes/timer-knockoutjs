@@ -16,7 +16,7 @@ body {
 
 @media(max-width: 768px) {
   body{
-    height: 80vh;
+    padding: 24px;
   }
 }
 
