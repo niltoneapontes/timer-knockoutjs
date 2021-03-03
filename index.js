@@ -46,15 +46,17 @@ function ChronometerViewModel() {
   }
 
   self.resetCount = function(data, event) {
-    clearInterval();
     self.time(0);
     self.isRunning(false);
     self.message("Vamos lá");
   }
 
   self.again = function(data,event) {
+    self.time(0);
+    setTimeout(() => {
     self.time(lastTimer);
     self.startCount();
+    }, 500);
   }
 };
 
