@@ -15,21 +15,6 @@ body {
   height: 100vh;
 }
 
-@media(max-width: 768px) {
-  body {
-    height: auto;
-  }
-  
-  main {
-    margin-top: 104px;
-  }
-  
-  footer{
-    position: relative;
-    margin-top: 104px;
-  }
-}
-
 main {
   display: flex;
   align-items: center;
@@ -122,4 +107,19 @@ footer {
   position: absolute;
   bottom: 0;
   font-size: 10px;
+}
+
+
+@media(max-width: 768px) {
+  body {
+    height: auto;
+  }
+  
+  main {
+    margin: 104px 0;
+  }
+  
+  footer{
+    position: relative;
+  }
 }
