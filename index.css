@@ -17,14 +17,15 @@ body {
 
 @media(max-width: 768px) {
   body {
-    height: calc(100vh + 208px);
+    height: auto;
   }
+  
   main {
     margin-top: 104px;
   }
   
   footer{
-    position: absolute;
+    position: relative;
     margin-top: 104px;
   }
 }
