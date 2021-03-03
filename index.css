@@ -19,6 +19,10 @@ body {
   body {
     height: auto;
   }
+
+  main {
+    margin-top: 104px;
+  }
   
   footer{
     position: absolute;
