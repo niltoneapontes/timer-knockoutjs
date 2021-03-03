@@ -108,7 +108,8 @@ footer {
   justify-content: space-between;
   position: absolute;
   bottom: 0;
-  font-size: 14px;
+  font-size: 10px;
+  text-align: center;
   color: #F5F5F5;
   width: 100%;
 }
