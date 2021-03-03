@@ -17,7 +17,7 @@ body {
 
 @media(max-width: 768px) {
   body {
-    height: auto;
+    height: 100%;
   }
 
   main {
