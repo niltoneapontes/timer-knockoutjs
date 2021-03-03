@@ -35,10 +35,10 @@ function ChronometerViewModel() {
 
       aux < 0 ? (
         clearInterval(repeat),
-        start.stop(),
-        end.play(),
         self.isRunning(false),
         self.message("STOP!"),
+        start.stop(),
+        end.play()
       ) : (
         self.time(aux)
       )
