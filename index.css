@@ -8,6 +8,7 @@ body {
   background-color: #455A64;
   color: #F5F5F5;
   display: flex;
+  flex-direction: column;
   font-family: 'Roboto', sans-serif;
   align-items: center;
   justify-content: center;
@@ -15,8 +16,9 @@ body {
 }
 
 @media(max-width: 768px) {
-  body{
-    padding: 24px;
+  footer{
+    position: absolute;
+    margin-top: 104px;
   }
 }
 
@@ -92,16 +94,20 @@ button {
   cursor: pointer;
 }
 
+#reset {
+  background-color: #D32F2F;
+}
+
 button:hover {
   opacity: 0.8;
 }
 
-button + button {
-  margin-left: 8px;
+button:disabled {
+  background-color: #a0a0a0 !important;
 }
 
-#reset {
-  background-color: #D32F2F;
+button + button {
+  margin-left: 8px;
 }
 
 footer {

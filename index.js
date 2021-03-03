@@ -2,10 +2,12 @@ function ChronometerViewModel() {
   let self = this;
   self.time = ko.observable(0);
   self.message = ko.observable("Vamos lá");
+  self.isRunning = ko.observable(false);
 
   let lastTimer = 0;
 
   self.startCount = function(data, event) {
+    self.isRunning(true);
     lastTimer = self.time();
     self.message("GO!");
 
@@ -14,6 +16,7 @@ function ChronometerViewModel() {
 
       aux < 0 ? (
         clearInterval(repeat),
+        self.isRunning(false),
         self.message("STOP!")
       ) : (
         self.time(aux)
@@ -25,6 +28,7 @@ function ChronometerViewModel() {
   self.resetCount = function(data, event) {
     clearInterval();
     self.time(0);
+    self.isRunning(false);
     self.message("Vamos lá");
   }
 

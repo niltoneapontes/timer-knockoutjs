@@ -29,8 +29,8 @@
     </label>
     <h3 data-bind="text: message"></h3>
     <div>
-      <button type="button" data-bind="click: startCount">Iniciar</button>
-      <button id="reset" type="button" data-bind="click: resetCount">Resetar</button>
+      <button type="button" data-bind="enable: isRunning() === false, click: startCount">Iniciar</button>
+      <button id="reset" type="button" data-bind="enable: isRunning() === true, click: resetCount">Resetar</button>
     </div>
   </main>
 
