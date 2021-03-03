@@ -104,9 +104,17 @@ button + button {
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
   position: absolute;
   bottom: 0;
-  font-size: 10px;
+  font-size: 14px;
+  color: #F5F5F5;
+  width: 100%;
+}
+
+a:active, a:visited, a {
+  color: #F5F5F5;
 }
 
 
