@@ -17,9 +17,8 @@ body {
 
 @media(max-width: 768px) {
   body {
-    height: 100%;
+    height: calc(100vh + 208px);
   }
-
   main {
     margin-top: 104px;
   }
